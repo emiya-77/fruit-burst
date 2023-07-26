@@ -1,44 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- TAILWIND CSS & DAISY-UI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+		<!-- TAILWIND CSS & DAISY-UI CDN -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- GOOGLE FONTS -->
+		<!-- GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+			rel="stylesheet"
+		/>
 
-    <!-- TAILWIND CUSTOM CLASSES -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
-    </script>
+		<!-- TAILWIND CUSTOM CLASSES -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: "#da373d",
+						},
+					},
+				},
+			};
+		</script>
 
-    <title>Fruit Burst</title>
-</head>
-<body>
-    <!-- HEADER SECTION START -->
-    <header>
+		<!-- CUSTOM STYLES -->
+		<style>
+			.font-lato {
+				font-family: "Lato", sans-serif;
+			}
+		</style>
 
-    </header>
+		<title>Fruit Burst</title>
+	</head>
+	<body class="font-lato">
+		<!-- HEADER SECTION START -->
+		<header>
+			<!-- NAV SECTION START -->
+			<nav class="my-5">
+				<div
+					class="navbar w-full justify-between lg:bg-[#F85559] rounded-full"
+				>
+					<div
+						class="navbar-start w-full flex-row-reverse justify-between"
+					>
+						<div class="dropdown dropdown-end">
+							<label
+								tabindex="0"
+								class="btn btn-ghost lg:hidden m-1"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M4 6h20M4 12h20M4 18h20"
+									/>
+									<!-- M4 6h16M4 12h8m-8 6h16 -->
+								</svg>
+							</label>
+							<ul
+								tabindex="0"
+								class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+							>
+								<li><a>Home</a></li>
+								<li><a>About Us</a></li>
+								<li><a>Shop</a></li>
+								<li><a>All Fruits</a></li>
+							</ul>
+						</div>
+						<a
+							class="btn btn-ghost normal-case text-xl flex justify-center items-center"
+						>
+							<div class="w-7">
+								<img
+									class="w-full"
+									src="./images/logo.png"
+									alt=""
+								/>
+							</div>
+							<h1 class="text-xl font-bold">Fruit Burst</h1>
+						</a>
+					</div>
+					<div class="navbar-center hidden lg:flex">
+						<ul class="menu menu-horizontal px-1">
+							<li><a>Home</a></li>
+							<li><a>About Us</a></li>
+							<li><a>Shop</a></li>
+							<li><a>All Fruits</a></li>
+						</ul>
+					</div>
+					<div class="lg:navbar-end hidden">
+						<div class="form-control">
+							<input
+								type="text"
+								placeholder="Search here"
+								class="input rounded-full w-24 md:w-auto"
+							/>
+						</div>
+					</div>
+				</div>
+			</nav>
 
-    <!-- MAIN SECTION START -->
-    <main>
+			<!-- HERO SECTION START -->
+			<section>
+				<div class="carousel w-full mx-5">
+					<div id="slide1" class="h-60 carousel-item relative w-full">
+						<!-- <img src="/images/banner1.png" class="w-full" /> -->
+						<div
+							class="hero rounded-2xl overflow-hidden"
+							style="background-image: url(./images/banner1.png)"
+						>
+							<div class="hero-overlay bg-opacity-60"></div>
+							<div
+								class="hero-content text-center text-neutral-content"
+							>
+								<div class="max-w-md p-2">
+									<h1
+										class="mb-2 lg:text-5xl text-3xl text-white font-bold"
+									>
+										Exotic tastes at your doorstep
+									</h1>
+									<p
+										class="mb-5 text-white text-sm font-normal"
+									>
+										We supply highly quality organic
+										products
+									</p>
+									<button
+										class="btn btn-primary px-5 text-white bg-[#F85559] border-none rounded"
+									>
+										Shop Now
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a
+								href="#slide4"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M7.875 9.80518L4.125 6.05518L7.875 2.30518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#slide2"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M4.125 2.30518L7.875 6.05518L4.125 9.80518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+							></a>
+						</div>
+					</div>
+					<div id="slide2" class="h-60 carousel-item relative w-full">
+						<!-- <img src="/images/banner1.png" class="w-full" /> -->
+						<div
+							class="hero rounded-2xl overflow-hidden"
+							style="background-image: url(./images/banner2.png)"
+						>
+							<div class="hero-overlay bg-opacity-60"></div>
+							<div
+								class="hero-content text-center text-neutral-content"
+							>
+								<div class="max-w-md p-2">
+									<h1
+										class="mb-5 lg:text-5xl text-3xl text-white font-bold"
+									>
+										Exotic tastes at your doorstep
+									</h1>
+									<p
+										class="mb-5 text-white text-sm font-normal"
+									>
+										We supply highly quality organic
+										products
+									</p>
+									<button class="btn btn-primary">
+										Get Started
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a
+								href="#slide1"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M7.875 9.80518L4.125 6.05518L7.875 2.30518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#slide3"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M4.125 2.30518L7.875 6.05518L4.125 9.80518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+							></a>
+						</div>
+					</div>
+					<div id="slide3" class="h-60 carousel-item relative w-full">
+						<!-- <img src="/images/banner1.png" class="w-full" /> -->
+						<div
+							class="hero rounded-2xl overflow-hidden"
+							style="background-image: url(./images/banner3.png)"
+						>
+							<div class="hero-overlay bg-opacity-60"></div>
+							<div
+								class="hero-content text-center text-neutral-content"
+							>
+								<div class="max-w-md p-2">
+									<h1
+										class="mb-5 lg:text-5xl text-3xl text-white font-bold"
+									>
+										Exotic tastes at your doorstep
+									</h1>
+									<p
+										class="mb-5 text-white text-sm font-normal"
+									>
+										We supply highly quality organic
+										products
+									</p>
+									<button class="btn btn-primary">
+										Get Started
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a
+								href="#slide2"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M7.875 9.80518L4.125 6.05518L7.875 2.30518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#slide4"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M4.125 2.30518L7.875 6.05518L4.125 9.80518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+							></a>
+						</div>
+					</div>
+					<div id="slide4" class="h-60 carousel-item relative w-full">
+						<!-- <img src="/images/banner1.png" class="w-full" /> -->
+						<div
+							class="hero rounded-2xl overflow-hidden"
+							style="background-image: url(./images/banner4.png)"
+						>
+							<div class="hero-overlay bg-opacity-60"></div>
+							<div
+								class="hero-content text-center text-neutral-content"
+							>
+								<div class="max-w-md p-2">
+									<h1
+										class="mb-5 lg:text-5xl text-3xl text-white font-bold"
+									>
+										Exotic tastes at your doorstep
+									</h1>
+									<p
+										class="mb-5 text-white text-sm font-normal"
+									>
+										We supply highly quality organic
+										products
+									</p>
+									<button class="btn btn-primary">
+										Get Started
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a
+								href="#slide3"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M7.875 9.80518L4.125 6.05518L7.875 2.30518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#slide1"
+								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="14"
+									height="16"
+									viewBox="0 0 12 13"
+									fill="none"
+								>
+									<path
+										d="M4.125 2.30518L7.875 6.05518L4.125 9.80518"
+										stroke="white"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/></svg
+							></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
 
-    </main>
+		<!-- MAIN SECTION START -->
+		<main>
+			<!-- DEAL SECTION START -->
+		</main>
 
-    <!-- FOOTER SECTION START -->
-    <footer>
-
-    </footer>
-</body>
+		<!-- FOOTER SECTION START -->
+		<footer></footer>
+	</body>
 </html>
