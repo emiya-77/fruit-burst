@@ -20,6 +20,13 @@
 			rel="stylesheet"
 		/>
 
+		<!-- FONT AWESOME -->
+		<script
+			src="https://kit.fontawesome.com/1fc1b0e3f2.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+
 		<!-- TAILWIND CUSTOM CLASSES -->
 		<script>
 			tailwind.config = {
@@ -46,18 +53,15 @@
 		<!-- HEADER SECTION START -->
 		<header>
 			<!-- NAV SECTION START -->
-			<nav class="my-5">
+			<nav class="my-5 lg:my-10">
 				<div
-					class="navbar w-full justify-between lg:bg-[#F85559] rounded-full"
+					class="navbar lg:w-11/12 mx-auto justify-between lg:bg-[#F85559] lg:rounded-full lg:py-4 lg:px-6 lg:justify-around"
 				>
 					<div
-						class="navbar-start w-full flex-row-reverse justify-between"
+						class="navbar-start w-full flex-row-reverse lg:flex-row justify-between lg:order-2 lg:justify-center lg:items-center"
 					>
-						<div class="dropdown dropdown-end">
-							<label
-								tabindex="0"
-								class="btn btn-ghost lg:hidden m-1"
-							>
+						<div class="dropdown dropdown-end lg:hidden">
+							<label tabindex="0" class="btn btn-ghost m-1">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="h-5 w-5"
@@ -87,63 +91,95 @@
 						<a
 							class="btn btn-ghost normal-case text-xl flex justify-center items-center"
 						>
-							<div class="w-7">
+							<div class="w-12">
 								<img
 									class="w-full"
 									src="./images/logo.png"
 									alt=""
 								/>
 							</div>
-							<h1 class="text-xl font-bold">Fruit Burst</h1>
+							<h1
+								class="text-xl lg:text-white lg:text-4xl font-bold"
+							>
+								Fruit Burst
+							</h1>
 						</a>
 					</div>
-					<div class="navbar-center hidden lg:flex">
-						<ul class="menu menu-horizontal px-1">
+					<div class="navbar-center hidden lg:flex lg:order-1">
+						<ul
+							class="menu menu-horizontal lg:text-base p-0 lg:text-white lg: font-medium"
+						>
 							<li><a>Home</a></li>
 							<li><a>About Us</a></li>
 							<li><a>Shop</a></li>
 							<li><a>All Fruits</a></li>
 						</ul>
 					</div>
-					<div class="lg:navbar-end hidden">
-						<div class="form-control">
+					<div
+						class="lg:navbar-end hidden lg:block lg:order-3 lg:w-3/5"
+					>
+						<div class="form-control relative">
 							<input
 								type="text"
 								placeholder="Search here"
 								class="input rounded-full w-24 md:w-auto"
 							/>
+							<!-- <i
+								class="fa-solid fa-magnifying-glass absolute top-3 right-4 text-xl"
+							></i> -->
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								class="absolute top-3 right-4"
+							>
+								<path
+									d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z"
+									stroke="#121212"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
 						</div>
 					</div>
 				</div>
 			</nav>
 
 			<!-- HERO SECTION START -->
-			<section>
+			<section class="relative">
 				<div class="carousel w-full">
-					<div id="slide1" class="h-60 carousel-item relative w-full">
+					<div
+						id="slide1"
+						class="h-60 lg:h-[500px] carousel-item relative w-full"
+					>
 						<!-- <img src="/images/banner1.png" class="w-full" /> -->
 						<div
-							class="hero rounded-2xl overflow-hidden mx-5"
-							style="background-image: url(./images/banner1.png)"
+							class="hero rounded-2xl overflow-hidden mx-5 lg:items-start"
+							style="
+								background-image: url('./images/banner1.png');
+							"
 						>
 							<div class="hero-overlay bg-opacity-60"></div>
 							<div
-								class="hero-content text-center text-neutral-content"
+								class="hero-content text-center text-neutral-content lg:mt-7"
 							>
-								<div class="max-w-md p-2">
+								<div class="max-w-md lg:max-w-2xl p-2">
 									<h1
-										class="mb-2 lg:text-5xl text-3xl text-white font-bold"
+										class="mb-2 lg:mb-6 lg:text-7xl text-3xl text-white font-bold"
 									>
 										Exotic tastes at your doorstep
 									</h1>
 									<p
-										class="mb-5 text-white text-sm font-normal"
+										class="mb-5 lg:mb-8 text-white text-sm lg:text-xl font-normal"
 									>
 										We supply highly quality organic
 										products
 									</p>
 									<button
-										class="btn btn-primary px-5 text-white bg-[#F85559] border-none rounded"
+										class="btn btn-primary px-5 lg:px-7 flex-nowrap lg:py-5 lg:text-xl normal-case text-white bg-[#F85559] border-none rounded lg:rounded-lg"
 									>
 										Shop Now
 									</button>
@@ -151,11 +187,11 @@
 							</div>
 						</div>
 						<div
-							class="p-2 absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+							class="p-2 lg:p-10 absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
 						>
 							<a
 								href="#slide4"
-								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+								class="btn btn-circle w-8 lg:w-14 h-[2rem] lg:h-[3.5rem] bg-[#121212] text-[#FFFFFF] border-none"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -163,6 +199,7 @@
 									height="16"
 									viewBox="0 0 12 13"
 									fill="none"
+									class="lg:w-7 lg:h-7"
 								>
 									<path
 										d="M7.875 9.80518L4.125 6.05518L7.875 2.30518"
@@ -175,13 +212,14 @@
 							</a>
 							<a
 								href="#slide2"
-								class="btn btn-circle w-8 h-[2rem] min-h-[2rem] bg-[#121212] text-[#FFFFFF] border-none"
+								class="btn btn-circle w-8 h-[2rem] lg:w-14 lg:h-[3.5rem] bg-[#121212] text-[#FFFFFF] border-none"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="14"
 									height="16"
 									viewBox="0 0 12 13"
 									fill="none"
+									class="lg:w-7 lg:h-7"
 								>
 									<path
 										d="M4.125 2.30518L7.875 6.05518L4.125 9.80518"
@@ -413,6 +451,15 @@
 						</div>
 					</div>
 				</div>
+				<div
+					class="hidden bg-white w-4/5 lg:flex items-center justify-between p-9 rounded-lg shadow-lg absolute -bottom-1/4 -translate-y-1/4 left-2/4 -translate-x-1/2"
+				>
+					<img src="./images/fruit1.png" alt="" />
+					<img src="./images/fruit2.png" alt="" />
+					<img src="./images/fruit3.png" alt="" />
+					<img src="./images/fruit4.png" alt="" />
+					<img src="./images/fruit5.png" alt="" />
+				</div>
 			</section>
 		</header>
 
@@ -420,20 +467,22 @@
 		<main>
 			<!-- DEAL SECTION START -->
 			<section
-				class="container mx-auto my-6 flex flex-col justify-center items-center"
+				class="container mx-auto my-6 lg:my-40 flex flex-col justify-center items-center"
 			>
 				<div
-					class="mx-auto text-sm flex flex-col justify-center items-center my-5"
+					class="mx-auto text-sm flex flex-col lg:flex-row justify-center lg:justify-between items-center my-5"
 				>
 					<div
-						class="flex flex-col justify-center items-center max-w-[277px]"
+						class="flex flex-col justify-center items-center lg:items-start max-w-[277px] lg:max-w-xl"
 					>
 						<h1
-							class="text-center mb-2 text-[#121212] font-extrabold text-lg"
+							class="text-center lg:text-left mb-2 lg:mb-6 text-[#121212] font-extrabold text-lg lg:text-5xl lg:font-extrabold"
 						>
 							Deal of the day
 						</h1>
-						<p class="text-center mb-5 text-[#121212] opacity-60">
+						<p
+							class="text-center lg:text-left mb-5 text-[#121212] lg:text-base lg:font-medium opacity-60"
+						>
 							Contrary to popular belief, is not simply random
 							text. It has roots in a piece of classical Latin
 							literature from 45 BC, making it over 2000 years
@@ -446,20 +495,20 @@
 						>
 							<div class="flex flex-col">
 								<span
-									class="countdown text-3xl font-extrabold text-[#121212] mb-1"
+									class="countdown text-3xl lg:text-5xl font-extrabold text-[#121212] mb-1"
 								>
 									<span style="--value: 15"></span>
 								</span>
 								<span
-									class="text-[#121212] opacity-60 text-[10px] font-normal"
+									class="text-[#121212] opacity-60 text-[10px] lg:text-base lg:font-medium font-normal"
 									>Days</span
 								>
 							</div>
 							<div class="flex justify-center items-start pt-1">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
+									width="30"
+									height="30"
 									viewBox="0 0 15 15"
 									fill="none"
 								>
@@ -474,20 +523,20 @@
 							</div>
 							<div class="flex flex-col">
 								<span
-									class="countdown text-3xl font-extrabold text-[#121212] mb-1"
+									class="countdown text-3xl lg:text-5xl font-extrabold text-[#121212] mb-1"
 								>
 									<span style="--value: 10"></span>
 								</span>
 								<span
-									class="text-[#121212] opacity-60 text-[10px] font-normal"
+									class="text-[#121212] opacity-60 text-[10px] font-normal lg:text-base lg:font-medium"
 									>Hours</span
 								>
 							</div>
 							<div class="flex justify-center items-start pt-1">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
+									width="30"
+									height="30"
 									viewBox="0 0 15 15"
 									fill="none"
 								>
@@ -502,20 +551,20 @@
 							</div>
 							<div class="flex flex-col">
 								<span
-									class="countdown text-3xl font-extrabold text-[#121212] mb-1"
+									class="countdown text-3xl lg:text-5xl font-extrabold text-[#121212] mb-1"
 								>
 									<span style="--value: 24"></span>
 								</span>
 								<span
-									class="text-[#121212] opacity-60 text-[10px] font-normal"
+									class="text-[#121212] opacity-60 text-[10px] font-normal lg:text-base lg:font-medium"
 									>Minutes</span
 								>
 							</div>
 							<div class="flex justify-center items-start pt-1">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
+									width="30"
+									height="30"
 									viewBox="0 0 15 15"
 									fill="none"
 								>
@@ -530,12 +579,12 @@
 							</div>
 							<div class="flex flex-col">
 								<span
-									class="countdown text-3xl font-extrabold text-[#121212] mb-1"
+									class="countdown text-3xl lg:text-5xl font-extrabold text-[#121212] mb-1"
 								>
 									<span style="--value: 42"></span>
 								</span>
 								<span
-									class="text-[#121212] opacity-60 text-[10px] font-normal"
+									class="text-[#121212] opacity-60 text-[10px] font-normal lg:text-base lg:font-medium"
 									>Seconds</span
 								>
 							</div>
@@ -543,27 +592,31 @@
 					</div>
 				</div>
 				<div
-					class="my-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4"
+					class="my-5 grid grid-cols-1 gap-4 lg:gap-5 md:grid-cols-2 lg:grid-cols-4"
 				>
 					<div
-						class="flex flex-col justify-center items-center py-12 px-12 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
+						class="flex flex-col justify-center items-center py-12 px-12 lg:px-6 lg:py-3 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
 					>
-						<div class="w-24 mb-12">
+						<div class="w-24 h-24 overflow-hidden mb-12 lg:mb-6">
 							<img
-								class="w-full"
+								class="h-full"
 								src="./images/fruit6.png"
 								alt=""
 							/>
 						</div>
 						<h2
-							class="text-[#121212] text-2xl font-bold pb-6 px-12 border-b"
+							class="text-[#121212] text-2xl font-bold pb-6 lg:pb-3 px-12 lg:px-1 border-b"
 						>
 							12.90$ - 18.85$
 						</h2>
-						<p class="my-6 text-base text-[#181818] opacity-60">
+						<p
+							class="my-6 lg:my-3 text-base text-[#181818] opacity-60"
+						>
 							Apples
 						</p>
-						<div class="rating rating-normal rating-half mb-8">
+						<div
+							class="rating rating-normal rating-half mb-8 lg:mb-4"
+						>
 							<input
 								type="radio"
 								name="rating-10"
@@ -628,9 +681,9 @@
 						</button>
 					</div>
 					<div
-						class="flex flex-col justify-center items-center py-12 px-12 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
+						class="flex flex-col justify-center items-center py-12 px-12 lg:px-6 lg:py-3 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
 					>
-						<div class="w-24 mb-12">
+						<div class="w-24 mb-12 lg:mb-6">
 							<img
 								class="w-full"
 								src="./images/fruit7.png"
@@ -638,14 +691,18 @@
 							/>
 						</div>
 						<h2
-							class="text-[#121212] text-2xl font-bold pb-6 px-12 border-b"
+							class="text-[#121212] text-2xl font-bold pb-6 lg:pb-3 px-12 lg:px-1 border-b"
 						>
 							12.90$ - 18.85$
 						</h2>
-						<p class="my-6 text-base text-[#181818] opacity-60">
+						<p
+							class="my-6 lg:my-3 text-base text-[#181818] opacity-60"
+						>
 							Orange
 						</p>
-						<div class="rating rating-normal rating-half mb-8">
+						<div
+							class="rating rating-normal rating-half mb-8 lg:mb-4"
+						>
 							<input
 								type="radio"
 								name="rating-10"
@@ -710,9 +767,9 @@
 						</button>
 					</div>
 					<div
-						class="flex flex-col justify-center items-center py-12 px-12 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
+						class="flex flex-col justify-center items-center py-12 px-12 lg:px-6 lg:py-3 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
 					>
-						<div class="w-24 mb-12">
+						<div class="w-24 mb-12 lg:mb-6">
 							<img
 								class="w-full"
 								src="./images/fruit8.png"
@@ -720,14 +777,18 @@
 							/>
 						</div>
 						<h2
-							class="text-[#121212] text-2xl font-bold pb-6 px-12 border-b"
+							class="text-[#121212] text-2xl font-bold pb-6 lg:pb-3 px-12 lg:px-1 border-b"
 						>
 							12.90$ - 18.85$
 						</h2>
-						<p class="my-6 text-base text-[#181818] opacity-60">
+						<p
+							class="my-6 lg:my-3 text-base text-[#181818] opacity-60"
+						>
 							Red Dragon
 						</p>
-						<div class="rating rating-normal rating-half mb-8">
+						<div
+							class="rating rating-normal rating-half mb-8 lg:mb-4"
+						>
 							<input
 								type="radio"
 								name="rating-10"
@@ -792,9 +853,9 @@
 						</button>
 					</div>
 					<div
-						class="flex flex-col justify-center items-center py-12 px-12 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
+						class="flex flex-col justify-center items-center py-12 px-12 lg:px-6 lg:py-3 border border-solid border-[#181818] border-opacity-10 rounded-lg max-w-fit mx-auto"
 					>
-						<div class="w-24 mb-12">
+						<div class="w-24 mb-12 lg:mb-6">
 							<img
 								class="w-full"
 								src="./images/fruit9.png"
@@ -802,14 +863,18 @@
 							/>
 						</div>
 						<h2
-							class="text-[#121212] text-2xl font-bold pb-6 px-12 border-b"
+							class="text-[#121212] text-2xl font-bold pb-6 lg:pb-3 px-12 lg:px-1 border-b"
 						>
 							12.90$ - 18.85$
 						</h2>
-						<p class="my-6 text-base text-[#181818] opacity-60">
+						<p
+							class="my-6 lg:my-3 text-base text-[#181818] opacity-60"
+						>
 							Banana
 						</p>
-						<div class="rating rating-normal rating-half mb-8">
+						<div
+							class="rating rating-normal rating-half mb-8 lg:mb-4"
+						>
 							<input
 								type="radio"
 								name="rating-10"
@@ -875,14 +940,288 @@
 					</div>
 				</div>
 				<button
-					class="btn btn-ghost flex-nowrap text-lg normal-case py-4 px-7 text-white bg-[#F85559] rounded"
+					class="btn btn-ghost flex-nowrap text-lg normal-case py-4 px-7 text-white bg-[#F85559] rounded lg:mt-6"
 				>
 					Shop All
 				</button>
 			</section>
+
+			<!-- TEAM SECTION START -->
+			<section class="my-6">
+				<div
+					class="hero place-items-start min-h-fit max-w-sm lg:max-w-7xl mx-auto rounded-lg overflow-hidden"
+					style="background-image: url('./images/team.png')"
+				>
+					<div class="p-6 hero-overlay bg-opacity-60">
+						<div
+							class="flex flex-col justify-start items-center mx-auto"
+						>
+							<div
+								class="flex flex-col justify-start items-center"
+							>
+								<h2 class="text-2xl font-bold text-white mb-2">
+									Meet the team
+								</h2>
+								<p
+									class="text-sm font-normal text-white text-center max-w-[277px] mb-8"
+								>
+									Contrary to popular belief, is not simply
+									random text. It has roots in a piece of
+									classical Latin literature from 45 BC,
+									making it over 2000 years old.
+								</p>
+							</div>
+							<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+								<div
+									class="flex flex-col justify-center items-center p-2"
+								>
+									<div class="avatar mb-8">
+										<div class="w-36 rounded-full">
+											<img src="./images/member1.png" />
+										</div>
+									</div>
+									<h3
+										class="text-2xl text-white font-bold mb-1"
+									>
+										Awlad Hossain
+									</h3>
+									<p
+										class="text-white font-medium text-base mb-4"
+									>
+										Fruits Expert
+									</p>
+									<div
+										class="flex justify-center items-center gap-3"
+									>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-facebook-f"
+											></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i class="fa-brands fa-twitter"></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-linkedin-in"
+											></i>
+										</div>
+									</div>
+								</div>
+								<div
+									class="flex flex-col justify-center items-center p-2"
+								>
+									<div class="avatar mb-8">
+										<div class="w-36 rounded-full">
+											<img src="./images/member2.png" />
+										</div>
+									</div>
+									<h3
+										class="text-2xl text-white font-bold mb-1"
+									>
+										Safia Chowdhury
+									</h3>
+									<p
+										class="text-white font-medium text-base mb-4"
+									>
+										Fruits Expert
+									</p>
+									<div
+										class="flex justify-center items-center gap-3"
+									>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-facebook-f"
+											></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i class="fa-brands fa-twitter"></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-linkedin-in"
+											></i>
+										</div>
+									</div>
+								</div>
+								<div
+									class="flex flex-col justify-center items-center p-2"
+								>
+									<div class="avatar mb-8">
+										<div class="w-36 rounded-full">
+											<img src="./images/member3.png" />
+										</div>
+									</div>
+									<h3
+										class="text-2xl text-white font-bold mb-1"
+									>
+										Rokib Hossain
+									</h3>
+									<p
+										class="text-white font-medium text-base mb-4"
+									>
+										Fruits Expert
+									</p>
+									<div
+										class="flex justify-center items-center gap-3"
+									>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-facebook-f"
+											></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i class="fa-brands fa-twitter"></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-linkedin-in"
+											></i>
+										</div>
+									</div>
+								</div>
+								<div
+									class="flex flex-col justify-center items-center p-2"
+								>
+									<div class="avatar mb-8">
+										<div class="w-36 rounded-full">
+											<img src="./images/member4.png" />
+										</div>
+									</div>
+									<h3
+										class="text-2xl text-white font-bold mb-1"
+									>
+										Chaity
+									</h3>
+									<p
+										class="text-white font-medium text-base mb-4"
+									>
+										Fruits Expert
+									</p>
+									<div
+										class="flex justify-center items-center gap-3"
+									>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-facebook-f"
+											></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i class="fa-brands fa-twitter"></i>
+										</div>
+										<div
+											class="w-6 h-6 flex justify-center items-center rounded-full bg-[#F85559] text-white text-sm"
+										>
+											<i
+												class="fa-brands fa-linkedin-in"
+											></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<!-- FOOTER SECTION START -->
-		<footer></footer>
+		<footer
+			class="footer footer-center p-8 bg-[#121212] text-base-content text-white"
+		>
+			<div>
+				<a
+					class="btn btn-ghost normal-case flex justify-center items-center"
+				>
+					<div class="w-10">
+						<img class="w-full" src="./images/logo.png" alt="" />
+					</div>
+					<h1 class="text-3xl font-bold">Fruit Burst</h1>
+				</a>
+			</div>
+			<div
+				class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-5 text-sm font-medium"
+			>
+				<a class="link link-hover">Home</a>
+				<a class="link link-hover">About Us</a>
+				<a class="link link-hover">Shop</a>
+				<a class="link link-hover">All Fruits</a>
+				<a class="link link-hover col-span-2">Support</a>
+				<a class="link link-hover col-span-2">My Account</a>
+			</div>
+			<div>
+				<div class="grid grid-cols-6 items-center justify-center gap-5">
+					<a
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							class="fill-current"
+						>
+							<path
+								d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+							></path></svg
+					></a>
+					<a
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							class="fill-current"
+						>
+							<path
+								d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+							></path></svg
+					></a>
+					<a
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							class="fill-current"
+						>
+							<path
+								d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+							></path></svg
+					></a>
+					<a href="">
+						<i class="fa-brands fa-linkedin-in text-2xl"></i>
+					</a>
+					<a href="">
+						<i
+							class="fa-brands fa-instagram text-white text-2xl"
+						></i>
+					</a>
+					<a href="">
+						<i class="fa-brands fa-apple text-white text-3xl"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
